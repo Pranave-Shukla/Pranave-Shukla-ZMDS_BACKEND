@@ -1,0 +1,19 @@
+@Library("agama_ci_cd") _
+
+properties([
+        buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '30', daysToKeepStr: '', numToKeepStr: '30')),
+])
+
+releaseSpringApp {
+    NEXUS_REPOSITORY_ID = "nexus_bls"
+    NEXUS_RELEASES_REPOSITORY = "http://192.168.201.150:8081/repository/maven-releases"
+    NEXUS_SNAPSHOTS_REPOSITORY = "http://192.168.201.150:8081/repository/maven-snapshots"
+    buildCommand = "mvn clean package -DskipTests=true -B -U "
+    testCommand = "mvn clean test -B -U "
+    emailRecipients = 'wwaldon'
+    deployCommand = "mvn clean deploy -B -DskipTests=true -DaltReleaseDeploymentRepository=${NEXUS_REPOSITORY_ID}::default::${NEXUS_RELEASES_REPOSITORY} -DaltSnapshotDeploymentRepository=${NEXUS_REPOSITORY_ID}::default::${NEXUS_SNAPSHOTS_REPOSITORY}"
+    releaseCommand = "mvn release:clean release:prepare release:perform"
+    release = true
+    image = "maven-3.6.3-jdk11:1.0"
+    skipsubfolders = true
+}
