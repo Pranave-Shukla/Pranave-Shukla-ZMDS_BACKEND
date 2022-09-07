@@ -22,24 +22,24 @@ jobs:
       uses: actions/setup-java@v3
       with:
         java-version: '11'
-        distribution: 'temurin'
+        distribution: 'adopt'
         cache: maven
     - name: Set up Maven
       uses: stCarolas/setup-maven@v4.4
       with:
         maven-version: 3.6.1
     - name: Build with Maven
-      run: mvn clean install
+      run: mvn clean install --update-snapshots package
       
     - name: Build zdms
-      run: mvn clean install
+      run: mvn clean install --update-snapshots package
       working-directory: zdms
       
     - name: Build zdms-jacoco-aggregated-reports
-      run: mvn clean install
+      run: mvn clean install --update-snapshots package
       working-directory: zdms-jacoco-aggregated-reports
     - name: Build with zdms-rest-api
-      run: mvn clean install
+      run: mvn clean install --update-snapshots package
       working-directory: zdms-rest-api
       
       
