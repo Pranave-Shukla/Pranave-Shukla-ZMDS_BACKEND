@@ -30,7 +30,7 @@ jobs:
         maven-version: 3.6.1
     - name: Build with Maven
       run: mvn clean install
-      working-directory: ZMDS_BACKEND
+      
       
 
 
