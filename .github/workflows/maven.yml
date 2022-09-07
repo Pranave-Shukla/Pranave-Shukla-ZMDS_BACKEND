@@ -13,6 +13,9 @@ on:
 jobs:
   build:
     runs-on: windows-latest
+    permissions:
+     packages: write
+     contents: read
     steps:
     - uses: actions/checkout@v3
     - name: Set up JDK 11
@@ -27,7 +30,10 @@ jobs:
         maven-version: 3.6.1
     - name: Build with Maven
       run: mvn clean install 
-      working-directory: .\ZMDS_BACKEND\zdms\target
+      working-directory: ./ZMDS_BACKEND
+      
+
+
       
  
           
