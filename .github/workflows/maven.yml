@@ -17,7 +17,7 @@ jobs:
 
     strategy:
       matrix:
-        maven: [ '3.6.1' ]
+        maven: [3.6.1]
 
     name: Maven ${{ matrix.maven }} sample
     steps:
