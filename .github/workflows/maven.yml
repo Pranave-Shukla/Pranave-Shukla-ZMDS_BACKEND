@@ -29,9 +29,6 @@ jobs:
     - run: mvn --batch-mode --update-snapshots verify
     - run: mkdir staging && cp target/*.jar staging
       working-directory: zdms
-    - uses: actions/upload-artifact@v3
-      with:
-         name: Package
-         path: staging
+    
       
     
