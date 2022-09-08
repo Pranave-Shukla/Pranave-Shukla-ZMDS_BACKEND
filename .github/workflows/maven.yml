@@ -29,7 +29,7 @@ jobs:
       run: |
        mvn clean install --batch-mode --update-snapshots verify
        mkdir staging && cp target/*.jar staging
-       working-directory: zdms
+     
      
     
       
