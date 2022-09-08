@@ -28,6 +28,13 @@ jobs:
     - name: Build zdms
       run: mvn clean install --update-snapshots package
       working-directory: zdms
+    - name: Archive artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: GeyserUpdater
+        path: |
+          target/*.jar
+          !target/original-*.jar
       
     
       
