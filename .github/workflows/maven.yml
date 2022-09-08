@@ -24,3 +24,15 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn clean install
+      
+    - name: Build zdms
+      run: mvn clean install --update-snapshots package
+      working-directory: zdms
+      
+    - name: Build zdms-jacoco-aggregated-reports
+      run: mvn clean install --update-snapshots package
+      working-directory: zdms-jacoco-aggregated-reports
+      
+    - name: Build with zdms-rest-api
+      run: mvn clean install --update-snapshots package
+      working-directory: zdms-rest-api
