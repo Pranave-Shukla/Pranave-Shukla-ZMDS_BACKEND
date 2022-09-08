@@ -26,18 +26,12 @@ jobs:
       run: mvn clean install
       
     - name: Build zdms
-      run: mvn clean install --update-snapshots package
+    - run: mvn --batch-mode --update-snapshots verify
+    - run: mkdir staging && cp target/*.jar staging
       working-directory: zdms
-    - name: Archive artifacts
-      uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v3
       with:
-        name: GeyserUpdater
-        path: |
-          target/*.jar
-          !target/original-*.jar
+         name: Package
+         path: staging
       
     
-      
-    - name: Build with zdms-rest-api
-      run: mvn clean install --update-snapshots package
-      working-directory: zdms-rest-api
