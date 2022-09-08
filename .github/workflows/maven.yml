@@ -29,9 +29,7 @@ jobs:
       run: mvn clean install --update-snapshots package
       working-directory: zdms
       
-    - name: Build zdms-jacoco-aggregated-reports
-      run: mvn clean install --update-snapshots package
-      working-directory: zdms-jacoco-aggregated-reports
+    
       
     - name: Build with zdms-rest-api
       run: mvn clean install --update-snapshots package
