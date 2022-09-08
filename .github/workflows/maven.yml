@@ -26,9 +26,9 @@ jobs:
       run: mvn clean install
       
     - name: Build zdms
-    - run: mvn --batch-mode --update-snapshots verify
-    - run: mkdir staging && cp target/*.jar staging
+      run: mvn clean install --batch-mode --update-snapshots verify
       working-directory: zdms
+     
     
       
     
