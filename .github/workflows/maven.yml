@@ -25,7 +25,7 @@ jobs:
       run: mvn clean install
       
     - name: step 3- List current directory
-      run: ls -a
+      run: ls -D
       
     - name: step 4- target folder
       run: |
