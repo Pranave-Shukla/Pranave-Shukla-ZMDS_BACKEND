@@ -1,6 +1,3 @@
-/*.classpath
-/.classpath
-*.iml
-/build
-target/
+.target/
+.target/*jar
 
