@@ -90,7 +90,7 @@
                 <version>3.0.0-M4</version>
                 <configuration>
                     <localCheckout>true</localCheckout>
-                    <pushChanges>false</pushChanges>
+                    <pushChanges>true</pushChanges>
                 </configuration>
                 <dependencies>
                     <dependency>
