@@ -1,8 +1,6 @@
-<<<<<<< Updated upstream
-=======
-
+/*.classpath
+/.classpath
+*.iml
+/build
 target/
-
-
->>>>>>> Stashed changes
 
