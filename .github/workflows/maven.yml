@@ -24,13 +24,7 @@ jobs:
     - name: step 2- Build with Maven
       run: mvn clean install
       
-    - name: step 3- List current directory
-      run: pwd
-      
-    - name: step 4- target folder
-      run: |
-       cd target
-       ls -a
+    
      
       
     
