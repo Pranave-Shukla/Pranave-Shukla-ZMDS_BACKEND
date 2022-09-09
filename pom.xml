@@ -50,19 +50,6 @@
         </dependencies>
     </dependencyManagement>
 
-    <distributionManagement>
-        <repository>
-            <id>nexus-releases</id>
-            <name>libs-releases</name>
-            <url>http://192.168.201.150:8081/repository/maven-releases</url>
-        </repository>
-        <snapshotRepository>
-            <id>nexus-releases</id>
-            <name>libs-snapshot</name>
-            <url>http://192.168.201.150:8081/repository/maven-snapshots</url>
-        </snapshotRepository>
-    </distributionManagement>
-
     <build>
         <pluginManagement>
             <plugins>
