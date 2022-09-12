@@ -40,7 +40,7 @@
         <!--  Before attempting release replace git_user with your username -->
         <connection>scm:git:ssh:https://github.com/Pranave-Shukla/ZMDS_BACKEND</connection>
         <developerConnection>scm:git:ssh:https://github.com/Pranave-Shukla/ZMDS_BACKEND</developerConnection>
-        https://github.com/Pranave-Shukla/ZMDS_BACKEND.git
+        
         <tag>HEAD</tag>
     </scm>
 
