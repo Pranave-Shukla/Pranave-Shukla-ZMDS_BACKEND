@@ -38,8 +38,9 @@
 
     <scm>
         <!--  Before attempting release replace git_user with your username -->
-        <connection>scm:git:ssh://agama_jenkins@gerrit.bluesoft.com:29418/ZOETIS/ZMDS_BACKEND</connection>
-        <developerConnection>scm:git:ssh://agama_jenkins@gerrit.bluesoft.com:29418/ZOETIS/ZMDS_BACKEND</developerConnection>
+        <connection>scm:git:ssh:https://github.com/Pranave-Shukla/ZMDS_BACKEND</connection>
+        <developerConnection>scm:git:ssh:https://github.com/Pranave-Shukla/ZMDS_BACKEND</developerConnection>
+        https://github.com/Pranave-Shukla/ZMDS_BACKEND.git
         <tag>HEAD</tag>
     </scm>
 
