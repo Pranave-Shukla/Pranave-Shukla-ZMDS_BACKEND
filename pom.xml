@@ -36,13 +36,7 @@
         <log4j2.version>2.17.2</log4j2.version>
     </properties>
 
-    <scm>
-        <!--  Before attempting release replace git_user with your username -->
-        <connection>scm:git:ssh:https://github.com/Pranave-Shukla/ZMDS_BACKEND</connection>
-        <developerConnection>scm:git:ssh:https://github.com/Pranave-Shukla/ZMDS_BACKEND</developerConnection>
-        
-        <tag>HEAD</tag>
-    </scm>
+    
 
     <dependencyManagement>
         <dependencies>
@@ -56,18 +50,7 @@
         </dependencies>
     </dependencyManagement>
 
-    <distributionManagement>
-        <repository>
-            <id>nexus-releases</id>
-            <name>libs-releases</name>
-            <url>http://192.168.201.150:8081/repository/maven-releases</url>
-        </repository>
-        <snapshotRepository>
-            <id>nexus-releases</id>
-            <name>libs-snapshot</name>
-            <url>http://192.168.201.150:8081/repository/maven-snapshots</url>
-        </snapshotRepository>
-    </distributionManagement>
+    
 
     <build>
         <pluginManagement>
