@@ -126,7 +126,7 @@
                             <goal>process</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>target/generated-sources/java</outputDirectory>
+                            <outputDirectory>target</outputDirectory>
                             <processor>com.mysema.query.apt.jpa.JPAAnnotationProcessor</processor>
                         </configuration>
                     </execution>
