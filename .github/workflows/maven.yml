@@ -25,7 +25,9 @@ jobs:
     - name: step 2-Packaging Jar
       id: packaging-jar
       shell: bash
-      run: mvn clean install
+      run: |
+       cd .
+       mvn clean install
       
     
      
