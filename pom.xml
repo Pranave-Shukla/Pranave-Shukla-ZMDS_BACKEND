@@ -36,7 +36,12 @@
         <log4j2.version>2.17.2</log4j2.version>
     </properties>
 
-   
+    <scm>
+        <!--  Before attempting release replace git_user with your username -->
+        <connection>scm:git:ssh://agama_jenkins@gerrit.bluesoft.com:29418/ZOETIS/ZMDS_BACKEND</connection>
+        <developerConnection>scm:git:ssh://agama_jenkins@gerrit.bluesoft.com:29418/ZOETIS/ZMDS_BACKEND</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
 
     <dependencyManagement>
         <dependencies>
@@ -49,6 +54,19 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <distributionManagement>
+        <repository>
+            <id>nexus-releases</id>
+            <name>libs-releases</name>
+            <url>http://192.168.201.150:8081/repository/maven-releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus-releases</id>
+            <name>libs-snapshot</name>
+            <url>http://192.168.201.150:8081/repository/maven-snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <build>
         <pluginManagement>
@@ -72,7 +90,7 @@
                 <version>3.0.0-M4</version>
                 <configuration>
                     <localCheckout>true</localCheckout>
-                    <pushChanges>true</pushChanges>
+                    <pushChanges>false</pushChanges>
                 </configuration>
                 <dependencies>
                     <dependency>
@@ -126,7 +144,7 @@
                             <goal>process</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>target</outputDirectory>
+                            <outputDirectory>target/generated-sources/java</outputDirectory>
                             <processor>com.mysema.query.apt.jpa.JPAAnnotationProcessor</processor>
                         </configuration>
                     </execution>
