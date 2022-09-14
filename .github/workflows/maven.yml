@@ -24,7 +24,7 @@ jobs:
           java-version: '11'
           java-package: jdk
     - name: Build and test project
-      working-directory: ZMDS_BACKEND
+     
       run: mvn -B verify
     - name: Upload Maven build artifact
       uses: actions/upload-artifact@v2
