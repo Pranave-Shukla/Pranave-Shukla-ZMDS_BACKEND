@@ -12,6 +12,7 @@ com\zoetis\zdms\rest\ProductController.class
 com\zoetis\zdms\dao\repository\LocalizedErrorCodesRepository.class
 com\zoetis\zdms\model\dictionary\pageparameter\sort\SortDirection.class
 com\zoetis\zdms\service\impl\factory\FieldPredicateExpressionFactory$FieldType.class
+com\zoetis\zdms\CurAuditApi\CurAuditApi.class
 com\zoetis\zdms\config\SecurityConfig.class
 com\zoetis\zdms\model\dictionary\localized\customerstatus\LocalizedCustomerStatus.class
 com\zoetis\zdms\model\QProductStatus.class
@@ -128,6 +129,7 @@ com\zoetis\zdms\model\dictionary\BooleanValue.class
 com\zoetis\zdms\mapper\SourceSystemMapper.class
 com\zoetis\zdms\model\dictionary\localized\customerstatus\QLocalizedCustomerStatus.class
 com\zoetis\zdms\exception\common\NotFoundException.class
+com\zoetis\zdms\rest\CurAuditController.class
 com\zoetis\zdms\dao\repository\LocalizedBooleanValueRepository.class
 com\zoetis\zdms\rest\factory\ResponseEntityFactory.class
 com\zoetis\zdms\mapper\LanguageMapperImpl.class
